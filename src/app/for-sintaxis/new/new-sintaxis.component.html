@@ -1,0 +1,13 @@
+
+  <div class="card">
+    <div class="card-header">Nueva Sintaxis ({{ "@for" }})</div>
+    <div class="card-body">
+      <pre><code>
+              &lt;ul&gt;
+                {{'@for (fruta of frutas; track $index; let i = $index) {'}}
+                  &lt;li&gt;{{'{{i+1}}'}} - {{'{{fruta}}'}}&lt;/li&gt;
+                {{'}'}}
+              &lt;/ul&gt;
+        </code></pre>
+    </div>
+  </div>
