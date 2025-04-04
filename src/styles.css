@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+/* home.component.css */
+:root {
+    --primary: #dd0031; /* Color rojo de Angular */
+    --secondary: #1976d2; /* Color azul de Angular */
+    --dark: #1e293b;
+    --light: #f8f9fa;
+    --code-bg: #282a36;
+    --shadow: 0 8px 30px rgba(0,0,0,0.12);
+  }

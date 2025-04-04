@@ -1,0 +1,195 @@
+<!-- home.component.html -->
+<div class="hero">
+  <div class="particles-container">
+    <!-- Elementos decorativos animados -->
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+  </div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <div class="hero-content">
+          <div class="badge-container">
+            <span class="version-badge">Angular 19</span>
+          </div>
+          <h1 class="hero-title">Nueva Sintaxis en Angular</h1>
+          <p class="hero-subtitle">
+            Descubre cómo ha evolucionado Angular hacia un enfoque más cercano a
+            JavaScript con su nueva sintaxis de control de flujo
+          </p>
+          <div class="hero-buttons">
+            <a routerLink="/if-sintaxis" class="btn-explore"
+              >Explorar ejemplos <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-block">
+        <div class="hero-image">
+          <div class="code-example">
+            <div class="code-line">{{ "@if (showContent) {" }}</div>
+            <div class="code-line indent">// Nuevo contenido</div>
+            <div class="code-line">{{ "} @else ´{" }}</div>
+            <div class="code-line indent">// Alternativa</div>
+            <div class="code-line">{{'}'}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="features-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Nueva Sintaxis de Bloques de Control</h2>
+      <p>
+        Angular ha revolucionado su enfoque para estructuras de control haciendo
+        el código más limpio, intuitivo y similar a JavaScript
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let feature of features">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-{{ feature.icon }}"></i>
+          </div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+          <a
+            [routerLink]="
+              '/' +
+              feature.title.toLowerCase().split('/')[0].trim() +
+              '-sintaxis'
+            "
+            class="feature-link"
+            >Ver ejemplos <i class="fas fa-chevron-right"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="comparison-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Comparativa de Sintaxis</h2>
+      <p>
+        Explora las diferencias entre la sintaxis tradicional y la nueva
+        aproximación
+      </p>
+    </div>
+
+    <div class="comparison-container">
+      <div class="comparison-col old">
+        <div class="comparison-header">
+          <h3>Sintaxis Tradicional</h3>
+          <span class="badge old-badge">Anterior</span>
+        </div>
+        <div class="comparison-content">
+          <div class="code-block">
+            <pre><code>&lt;div *ngIf="showContent; else notShown"&gt;
+  Contenido visible
+&lt;/div&gt;
+&lt;ng-template #notShown&gt;
+  Contenido alternativo
+&lt;/ng-template&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrow-container">
+        <div class="arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <div class="comparison-col new">
+        <div class="comparison-header">
+          <h3>Nueva Sintaxis</h3>
+          <span class="badge new-badge">Angular 19</span>
+        </div>
+        <div class="comparison-content">
+          <div class="code-block">
+            <pre><code>{{'@if (showContent) {'}} 
+  &lt;div&gt;Contenido visible&lt;/div&gt;
+{{'} @else {'}} 
+  &lt;div&gt;Contenido alternativo&lt;/div&gt;
+</code>{{'}'}}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="benefits">
+      <h3>Ventajas de la nueva sintaxis</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="benefits-list">
+            <li>
+              <i class="fas fa-check"></i> Sintaxis más cercana a JavaScript
+              puro
+            </li>
+            <li><i class="fas fa-check"></i> Mejor legibilidad del código</li>
+            <li>
+              <i class="fas fa-check"></i> Reducción de elementos anidados
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="benefits-list">
+            <li>
+              <i class="fas fa-check"></i> Mejor rendimiento en el motor de
+              renderizado
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Mayor facilidad de mantenimiento
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Experiencia de desarrollo más
+              intuitiva
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>¡Comienza a explorar ahora!</h2>
+      <p>
+        Revisa ejemplos prácticos de cada estructura de control con su
+        implementación interactiva
+      </p>
+      <div class="cta-buttons">
+        <a routerLink="/if-sintaxis" class="btn btn-cta"
+          >Ver ejemplos de {{ "@if" }}</a
+        >
+        <a routerLink="/switch-sintaxis" class="btn btn-outline"
+          >Ver ejemplos de {{ "@switch" }}</a
+        >
+        <a routerLink="/for-sintaxis" class="btn btn-outline"
+          >Ver ejemplos de {{ "@for" }}</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>
+      Nueva Sintaxis de Angular &copy; {{ currentYear }} | Creado con Angular
+      19
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,51 @@
+<div class="m-5">
+  <h2>Ejemplo de FOR</h2>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Sintaxis Antigua (*ngFor)</div>
+        <div class="card-body">
+          <pre><code>
+&lt;ul&gt;
+  &lt;li *ngFor="let fruta of frutas; let i = index"&gt;
+{{'    {{i+1}} - {{fruta}}'}}
+  &lt;/li&gt;
+&lt;/ul&gt;
+        </code></pre>
+
+          <div class="resultado p-3 border mt-2">
+            <ul>
+              <li *ngFor="let fruta of frutas; let i = index">
+                {{ i + 1 }} - {{ fruta }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Nueva Sintaxis ({{ "@for" }})</div>
+        <div class="card-body">
+          <pre><code>
+&lt;ul&gt;
+  {{'@for (fruta of frutas; track $index; let i = $index) {'}}
+    &lt;li&gt;{{'{{i+1}}'}} - {{'{{fruta}}'}}&lt;/li&gt;
+  {{'}'}}
+&lt;/ul&gt;
+        </code></pre>
+
+          <div class="resultado p-3 border mt-2">
+            <ul>
+              @for (fruta of frutas; track $index; let i = $index) {
+              <li>{{ i + 1 }} - {{ fruta }}</li>
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

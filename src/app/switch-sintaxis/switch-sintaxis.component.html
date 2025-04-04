@@ -1,0 +1,76 @@
+<div class="m-5">
+  <h2>Ejemplo de SWITCH</h2>
+  <div class="btn-group m-3">
+    <button (click)="cambiarOpcion('A')" class="btn btn-sm btn-info m-1 p-3">
+      Opción A
+    </button>
+    <button (click)="cambiarOpcion('B')" class="btn btn-sm btn-info m-1 p-3">
+      Opción B
+    </button>
+    <button (click)="cambiarOpcion('C')" class="btn btn-sm btn-info m-1 p-3">
+      Opción C
+    </button>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Sintaxis Antigua ([ngSwitch])</div>
+        <div class="card-body">
+          <pre><code>
+&lt;div [ngSwitch]="opcion"&gt;
+  &lt;div *ngSwitchCase="'A'"&gt;Has seleccionado A&lt;/div&gt;
+  &lt;div *ngSwitchCase="'B'"&gt;Has seleccionado B&lt;/div&gt;
+  &lt;div *ngSwitchDefault&gt;Has seleccionado otra opción&lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+
+          <div class="resultado p-3 border mt-2">
+            <div [ngSwitch]="opcion">
+              <div *ngSwitchCase="'A'" class="text-primary">
+                Has seleccionado A
+              </div>
+              <div *ngSwitchCase="'B'" class="text-success">
+                Has seleccionado B
+              </div>
+              <div *ngSwitchDefault class="text-warning">
+                Has seleccionado otra opción
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Nueva Sintaxis ({{ "@switch" }})</div>
+        <div class="card-body">
+          <pre><code>
+{{'@switch (opcion) {'}}
+  {{'@case ("A") {'}}
+    &lt;div&gt;Has seleccionado A&lt;/div&gt;
+  {{'}'}}
+  {{'@case ("B") {'}}
+    &lt;div&gt;Has seleccionado B&lt;/div&gt;
+  {{'}'}}
+  {{'@default {'}}
+    &lt;div&gt;Has seleccionado otra opción&lt;/div&gt;
+  {{'}'}}
+{{'}'}}
+        </code></pre>
+
+          <div class="resultado p-3 border mt-2">
+            @switch (opcion) { @case ('A') {
+            <div class="text-primary">Has seleccionado A</div>
+            } @case ('B') {
+            <div class="text-success">Has seleccionado B</div>
+            } @default {
+            <div class="text-warning">Has seleccionado otra opción</div>
+            } }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

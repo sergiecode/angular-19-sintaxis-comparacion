@@ -1,0 +1,55 @@
+<div class="m-5">
+  <h2>Ejemplo de IF</h2>
+<button class="btn btn-primary m-3" (click)="toggle()">Toggle</button>
+
+<div class="row mt-3">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">Sintaxis Antigua (*ngIf)</div>
+      <div class="card-body">
+        <pre><code>
+&lt;div *ngIf="mostrar"&gt;
+  El contenido es visible
+&lt;/div&gt;
+&lt;div *ngIf="!mostrar"&gt;
+  El contenido está oculto
+&lt;/div&gt;
+        </code></pre>
+
+        <div class="resultado p-3 border mt-2">
+          <div *ngIf="mostrar" class="text-success">
+            El contenido es visible
+          </div>
+          <div *ngIf="!mostrar" class="text-danger">
+            El contenido está oculto
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">Nueva Sintaxis ({{ "@if" }})</div>
+      <div class="card-body">
+        <pre><code>
+{{'@if (mostrar) {'}}
+  &lt;div&gt;El contenido es visible&lt;/div&gt;
+{{'} @else {'}}
+  &lt;div&gt;El contenido está oculto&lt;/div&gt;
+{{'}'}}
+        </code></pre>
+
+        <div class="resultado p-3 border mt-2">
+          @if (mostrar) {
+          <div class="text-success">El contenido es visible</div>
+          } @else {
+          <div class="text-danger">El contenido está oculto</div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
