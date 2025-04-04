@@ -18,11 +18,11 @@
         <div class="card-header">Sintaxis Antigua ([ngSwitch])</div>
         <div class="card-body">
           <pre><code>
-&lt;div [ngSwitch]="opcion"&gt;
-  &lt;div *ngSwitchCase="'A'"&gt;Has seleccionado A&lt;/div&gt;
-  &lt;div *ngSwitchCase="'B'"&gt;Has seleccionado B&lt;/div&gt;
-  &lt;div *ngSwitchDefault&gt;Has seleccionado otra opción&lt;/div&gt;
-&lt;/div&gt;
+                &lt;div [ngSwitch]="opcion"&gt;
+                  &lt;div *ngSwitchCase="'A'"&gt;Has seleccionado A&lt;/div&gt;
+                  &lt;div *ngSwitchCase="'B'"&gt;Has seleccionado B&lt;/div&gt;
+                  &lt;div *ngSwitchDefault&gt;Has seleccionado otra opción&lt;/div&gt;
+                &lt;/div&gt;
         </code></pre>
 
           <div class="resultado p-3 border mt-2">
@@ -47,17 +47,17 @@
         <div class="card-header">Nueva Sintaxis ({{ "@switch" }})</div>
         <div class="card-body">
           <pre><code>
-{{'@switch (opcion) {'}}
-  {{'@case ("A") {'}}
-    &lt;div&gt;Has seleccionado A&lt;/div&gt;
-  {{'}'}}
-  {{'@case ("B") {'}}
-    &lt;div&gt;Has seleccionado B&lt;/div&gt;
-  {{'}'}}
-  {{'@default {'}}
-    &lt;div&gt;Has seleccionado otra opción&lt;/div&gt;
-  {{'}'}}
-{{'}'}}
+              {{'@switch (opcion) {'}}
+                {{'@case ("A") {'}}
+                  &lt;div&gt;Has seleccionado A&lt;/div&gt;
+                {{'}'}}
+                {{'@case ("B") {'}}
+                  &lt;div&gt;Has seleccionado B&lt;/div&gt;
+                {{'}'}}
+                {{'@default {'}}
+                  &lt;div&gt;Has seleccionado otra opción&lt;/div&gt;
+                {{'}'}}
+              {{'}'}}
         </code></pre>
 
           <div class="resultado p-3 border mt-2">

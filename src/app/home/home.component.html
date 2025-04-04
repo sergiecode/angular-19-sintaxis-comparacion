@@ -35,7 +35,7 @@
             <div class="code-line indent">// Nuevo contenido</div>
             <div class="code-line">{{ "} @else ´{" }}</div>
             <div class="code-line indent">// Alternativa</div>
-            <div class="code-line">{{'}'}}</div>
+            <div class="code-line">{{ "}" }}</div>
           </div>
         </div>
       </div>
@@ -95,11 +95,11 @@
         <div class="comparison-content">
           <div class="code-block">
             <pre><code>&lt;div *ngIf="showContent; else notShown"&gt;
-  Contenido visible
-&lt;/div&gt;
-&lt;ng-template #notShown&gt;
-  Contenido alternativo
-&lt;/ng-template&gt;</code></pre>
+                Contenido visible
+              &lt;/div&gt;
+              &lt;ng-template #notShown&gt;
+                Contenido alternativo
+              &lt;/ng-template&gt;</code></pre>
           </div>
         </div>
       </div>
@@ -118,10 +118,10 @@
         <div class="comparison-content">
           <div class="code-block">
             <pre><code>{{'@if (showContent) {'}} 
-  &lt;div&gt;Contenido visible&lt;/div&gt;
-{{'} @else {'}} 
-  &lt;div&gt;Contenido alternativo&lt;/div&gt;
-</code>{{'}'}}</pre>
+                  &lt;div&gt;Contenido visible&lt;/div&gt;
+                {{'} @else {'}} 
+                  &lt;div&gt;Contenido alternativo&lt;/div&gt;
+                </code>{{'}'}}</pre>
           </div>
         </div>
       </div>
@@ -188,8 +188,7 @@
 <footer class="footer">
   <div class="container">
     <p>
-      Nueva Sintaxis de Angular &copy; {{ currentYear }} | Creado con Angular
-      19
+      Nueva Sintaxis de Angular &copy; {{ currentYear }} | Creado con Angular 19
     </p>
   </div>
 </footer>
